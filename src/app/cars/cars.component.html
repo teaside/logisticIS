@@ -1,0 +1,11 @@
+<button class="btn btn-primary" (click)="addCar()">Добавить машину</button>
+<p>{{ addCarStatus }}</p>
+<hr>
+<app-car></app-car>
+<app-car></app-car>
+
+<hr>
+
+<input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">
+<input type="text" class="form-control" [(ngModel)]="inputText">
+<p> {{inputText}} </p>
