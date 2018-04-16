@@ -1,17 +1,10 @@
-<div class="container">
-    <div class="col-xs-8 xol-xs-offset-2">
-
-        <h3 [appBackground]="'yellow'" [defaultColor]="'brown'">{{headerText}}</h3>
-        <ul class="list-group">
-            <li *ngFor="let item of items" (mouseover)="onClick(item)" class="list-group-item">
-                {{item}}
-            </li>
-        </ul>
-        <div [ngSwitch]="current">
-            <p *ngSwitchCase="1">1</p>
-            <p *ngSwitchCase="2">2</p>
-            <p *ngSwitchCase="3">3</p>
-            <p *ngSwitchDefault>default</p>
-        </div>
-    </div>
+<div class="container col-xs-8 xol-xs-offset-2">
+    <h1> {{ asyncTitle | async }} </h1>
+    <input type="text" class="form-control" [(ngModel)]="searchCar">
+    <button class="btn btn-primary" (click)="addCar()">Add</button>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let car of cars | carFilter:searchCar:'descr'; let i = index">
+            <b> {{ i+1 }}</b> {{car.name}} <i> {{ car.descr }} </i>
+        </li>
+    </ul>
 </div>
