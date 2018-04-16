@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 // import { FormsModule, NgModel } from '@angular/forms';
 
 @Component({
@@ -8,15 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsComponent {
 
-  addCarStatus = '';
-  inputText = '';
+  cars: [{name: string, year: number}] = [{
+    name: 'Ford',
+    year: 2015
+  }, {
+    name: 'Mazda',
+    year: 2010
+  }, {
+    name: 'Audi',
+    year: 2017
+  }];
 
-  constructor() {
+  updateCarList(car: {name: string, year: number}) {
+    this.cars.push(car);
   }
-  addCar() {
-    this.addCarStatus = 'Машина добавлена';
+  changeCarName() {
+    this.cars[0].name = 'New car name';
   }
-  onKeyUp(event: Event) {
-   this.inputText = (<HTMLInputElement>event.target).value;
+  deleteCar() {
+    this.cars.splice(0, 1);
   }
 }
