@@ -1,7 +1,17 @@
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <app-cars></app-cars>
+    <div class="col-xs-8 xol-xs-offset-2">
+
+        <h3 [appBackground]="'yellow'" [defaultColor]="'brown'">{{headerText}}</h3>
+        <ul class="list-group">
+            <li *ngFor="let item of items" (mouseover)="onClick(item)" class="list-group-item">
+                {{item}}
+            </li>
+        </ul>
+        <div [ngSwitch]="current">
+            <p *ngSwitchCase="1">1</p>
+            <p *ngSwitchCase="2">2</p>
+            <p *ngSwitchCase="3">3</p>
+            <p *ngSwitchDefault>default</p>
         </div>
     </div>
 </div>
