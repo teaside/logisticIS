@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CarsService } from './cars.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,15 +8,25 @@ import { CarsService } from './cars.service';
 })
 export class AppComponent implements OnInit {
 
-  cars = [];
+@ViewChild('form') form: NgForm;
 
-  constructor(private carsService: CarsService) {
+  answers = [{
+    type: 'yes',
+    text: 'Да'
+  }, {
+    type: 'no',
+    text: 'нет'
+  }];
+
+    defaultAnswer = 'no';
+    defaultCountry = 'ru';
+  constructor() {
 
   }
   ngOnInit() {
-    this.cars = this.carsService.cars;
+
   }
-  addCarToList(carName: string) {
-    this.carsService.addCar(carName);
+  submitForm() {
+    console.log(this.form);
   }
 }

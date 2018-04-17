@@ -1,6 +1,25 @@
 <div class="container col-xs-8 xol-xs-offset-2">
-    <app-car-add (onCarAdd)="addCarToList($event)"></app-car-add>
-    <div class="list-group">
-        <app-car *ngFor="let car of cars" [car]="car"></app-car>
-    </div>
+    <form (ngSubmit)="submitForm()" #form="ngForm">
+        <div class="form-group" [ngClass]="{'has-error': email.invalid && email.touched}">
+            <label for="">Email</label>
+            <input type="text" class="form-control" ngModel name="email" required email #email="ngModel"></div>
+        <p *ngIf="email.invalid && email.touched">Введите корректный email</p>
+        <div class="form-group" [ngClass]="{'has-error': pass.invalid && pass.touched}">
+            <label for="">password</label>
+            <input type="password" class="form-control" ngModel name="pass" #pass="ngModel" required></div>
+        <p *ngIf="pass.invalid && pass.touched">Пароль не должен быть</p>
+        <div class="form-group"><label for=""></label>
+            <select class="form-control" [ngModel]="defaultCountry" name="country" required>
+              <option value="ru">Россия</option>
+              <option value="by">Беларусь</option>
+              <option value="ua">Украина</option>
+            </select>
+        </div>
+        <div class="radio" *ngFor="let ans of answers">
+            <label>
+            <input type="radio" [value]="ans.type" [ngModel]="defaultAnswer" name="answer" required> {{ans.text}}
+          </label>
+        </div>
+        <button class="btn btn-success" type="submit" [disabled]="!form.valid">Сохранить</button>
+    </form>
 </div>
