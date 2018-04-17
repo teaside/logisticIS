@@ -20,6 +20,9 @@ export class AppComponent implements OnInit {
 
     defaultAnswer = 'no';
     defaultCountry = 'ru';
+
+    formData = {};
+    isSubmitted = false;
   constructor() {
 
   }
@@ -27,6 +30,8 @@ export class AppComponent implements OnInit {
 
   }
   submitForm() {
-    console.log(this.form);
+    this.isSubmitted = true;
+    this.formData = this.form.value;
+    this.form.reset();
   }
 }
