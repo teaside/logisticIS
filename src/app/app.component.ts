@@ -1,24 +1,21 @@
-import { Component } from '@angular/core';
-import 'rxjs/Rx';
-import { Observable } from 'rxjs/Observable';
+import { Component, OnInit } from '@angular/core';
+import { CarsService } from './cars.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  searchCar = '';
-  cars = [{name: 'mazda', descr: 'WFG'}, {name: 'lada', descr: 'qef'}, {name: 'audi', descr: 'asdf'}, {name: 'BMW', descr: '12333'}];
+export class AppComponent implements OnInit {
 
+  cars = [];
 
-  asyncTitle = Observable.of('Async title 3 seconds')
-  .delay(3000);
+  constructor(private carsService: CarsService) {
 
-  addCar() {
-    console.log('add');
-    this.cars.push({
-      name: 'New car',
-      descr: 'asdasdasdas'
-    });
+  }
+  ngOnInit() {
+    this.cars = this.carsService.cars;
+  }
+  addCarToList(carName: string) {
+    this.carsService.addCar(carName);
   }
 }
