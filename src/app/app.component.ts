@@ -1,37 +1,28 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { CarsService } from './cars.service';
 
+interface Cars {
+  name: string;
+  color: string;
+  id: number;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-@ViewChild('form') form: NgForm;
+  cars: Cars[] = [];
 
-  answers = [{
-    type: 'yes',
-    text: 'Да'
-  }, {
-    type: 'no',
-    text: 'нет'
-  }];
+  constructor(private carsService: CarsService) {}
 
-    defaultAnswer = 'no';
-    defaultCountry = 'ru';
-
-    formData = {};
-    isSubmitted = false;
-  constructor() {
-
-  }
-  ngOnInit() {
-
-  }
-  submitForm() {
-    this.isSubmitted = true;
-    this.formData = this.form.value;
-    this.form.reset();
+  loadCars() {
+    this.carsService.
+    getCars()
+    .subscribe((cars: Cars[]) => {
+      this.cars = cars;
+    });
   }
 }
