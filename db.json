@@ -1,7 +1,17 @@
 {
+
+    "title": {
+        "value": "Менеджер машин"
+    },
     "cars": [{
-        "name": "Ford",
-        "color": "white",
-        "id": 1
-    }]
+            "name": "asd",
+            "color": "red",
+            "id": 5
+        },
+        {
+            "name": "123",
+            "color": "green",
+            "id": 6
+        }
+    ]
 }
