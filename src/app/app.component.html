@@ -1,18 +1,16 @@
-<div class="container col-xs-8 xol-xs-offset-2">
-    <h1>{{ appTitle | async}}</h1>
-    <input type="text" class="form-control" [(ngModel)]="carName">
-    <hr>
-    <button class="btn btn-primary" (click)="loadCars()">Загрузить машины</button>
-    <button class="btn btn-success" (click)="addCar()">Добавить машину</button>
-
-    <hr>
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let car of cars">
-            <span class="badge badge-secondary" [ngStyle]="{background: car.color}">
-              {{car.id}}
-            </span> {{car.name}}
-            <button class=" btn btn-xs btn-info" (click)="setNewColor(car)">Изменить цвет</button>
-            <button class=" btn btn-xs btn-danger" (click)="deleteCar(car)">Удалить машину</button>
-        </li>
-    </ul>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav mr-auto">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> <a class="nav-link" routerLink="/">Главная</a>
+            </li>
+            <li routerLinkActive="active">
+                <a class="nav-link" [routerLink]="'/cars'">Машины</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
