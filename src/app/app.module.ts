@@ -9,6 +9,7 @@ import { CarsService } from './cars.service';
 import { CarsComponent } from './cars/cars.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CarComponent } from './car/car.component';
 
 
 
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     CarsComponent,
-    HomeComponent
+    HomeComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,
