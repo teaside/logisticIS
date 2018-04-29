@@ -10,6 +10,10 @@ import { CarsComponent } from './cars/cars.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CarComponent } from './car/car.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
+import { NewPageComponent } from './new-page/new-page.component';
 
 
 
@@ -18,7 +22,9 @@ import { CarComponent } from './car/car.component';
     AppComponent,
     CarsComponent,
     HomeComponent,
-    CarComponent
+    CarComponent,
+    NotFoundComponent,
+    NewPageComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,7 @@ import { CarComponent } from './car/car.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ CarsService ],
+  providers: [ CarsService, AuthService, AuthGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,21 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private auth: AuthService
+  ) {}
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
   openCarsPage() {
-    this.router.navigate(['cars'], {relativeTo: this.route});
+    this.router.navigate(['cars'], { relativeTo: this.route });
+  }
+  changeAuthStatus(status: string) {
+    if (status === 'login') {
+      this.auth.login();
+    } else {
+      this.auth.logout();
+    }
   }
 }
