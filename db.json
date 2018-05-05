@@ -1,0 +1,73 @@
+{
+    "users": [{
+            "email": "dim@mail.ru",
+            "password": "123456",
+            "name": "Дима",
+            "phoneNumber": "+375295356204",
+            "type": "provider",
+            "id": 1
+        },
+        {
+            "email": "nedim@mail.ru",
+            "password": "123456",
+            "name": "неДима",
+            "phoneNumber": "+375295356204",
+            "type": "deliverer",
+            "id": 1
+        },
+        {
+            "email": "vasyamakarchuk@gmail.com",
+            "password": "Lord_1774",
+            "name": "Диа",
+            "tel": "+375295356204",
+            "type": "customer",
+            "id": 2
+        }
+    ],
+    "ordersList": [{
+            "id": 1,
+            "creator": "dim@mail.ru",
+            "from": "минск",
+            "to": "гомель",
+            "sizes": "5x5x1",
+            "wieght": "50кг",
+            "date": "15.05.2018",
+            "status": "open",
+            "respondedDeliverers": [{
+                "deliverer": "nedim@mail.ru",
+                "dateOfDeliver": "17.06.2018",
+                "value": 400
+            }]
+        },
+        {
+            "creator": "",
+            "from": "from",
+            "to": "to",
+            "sizes": "sized",
+            "weight": "weight",
+            "date": "0001-01-01",
+            "status": "",
+            "respondedDeliverers": {
+                "deliverer": "",
+                "dateOfDeliver": "",
+                "value": 200
+            },
+            "id": 2
+        },
+        {
+            "creator": "vasyamakarchuk@gmail.com",
+            "from": "Гомель",
+            "to": "Минск",
+            "sizes": "1х2х1",
+            "weight": "15 кг",
+            "date": "2018-04-02",
+            "status": "open",
+            "respondedDeliverers": {
+                "deliverer": "",
+                "dateOfDeliver": "",
+                "value": 300
+            },
+            "id": 3
+        }
+    ]
+}

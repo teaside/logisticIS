@@ -1,0 +1,55 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <!-- Start: Добавление нового вида товара -->
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <h4>Добавление нового заказа</h4>
+            <div class="col-md-4">
+                <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Откуда</label>
+                    <input type="text" class="form-control" name="from" autofocus required #name="ngModel" name="from" ngModel>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Куда</label>
+                    <input type="text" class="form-control" name="to" #name="ngModel" name="to" ngModel>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-black label-floating is-empty">
+                    <button type="submit" class="btn btn-success pull-left mt-3">Показать на карте</button>
+                </div>
+            </div>
+            <div class="clearfix "></div>
+            <div class="">
+                <div>Тут должна быть карта гугла</div>
+            </div>
+            <div class="clearfix "></div>
+            <div class="col-md-4">
+                <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Размеры</label>
+                    <input type="text" class="form-control" name="sizes" #name="ngModel" name="sizes" ngModel>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Вес</label>
+                    <input type="text" class="form-control" name="weight" #name="ngModel" name="weight" ngModel>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-black label-floating is-empty">
+                    <label class="control-label">Дата доставки</label>
+                    <input type="date" class="form-control" name="date" #name="ngModel" name="date" ngModel>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group form-black label-floating is-empty pull-right">
+                    <button type="submit" class="btn btn-success">Добавить</button>
+                </div>
+            </div>
+            <!-- <app-add-item></app-add-item> -->
+        </form>
+        <!-- End: Добавление нового вида товара -->
+    </div>
+</div>
