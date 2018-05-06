@@ -40,18 +40,18 @@
             }]
         },
         {
-            "creator": "",
+            "creator": "dim@mail.ru",
             "from": "from",
             "to": "to",
             "sizes": "sized",
             "weight": "weight",
             "date": "0001-01-01",
             "status": "",
-            "respondedDeliverers": {
+            "respondedDeliverers": [{
                 "deliverer": "",
                 "dateOfDeliver": "",
                 "value": 200
-            },
+            }],
             "id": 2
         },
         {
@@ -62,12 +62,33 @@
             "weight": "15 кг",
             "date": "2018-04-02",
             "status": "open",
-            "respondedDeliverers": {
-                "deliverer": "",
-                "dateOfDeliver": "",
-                "value": 300
-            },
+            "respondedDeliverers": [{
+                    "deliverer": "петр",
+                    "dateOfDeliver": "25.05.1997",
+                    "value": 300
+                },
+                {
+                    "deliverer": "петр",
+                    "dateOfDeliver": "25.05.1997",
+                    "value": 300
+                }
+            ],
             "id": 3
+        },
+        {
+            "creator": "vasyamakarchuk@gmail.com",
+            "from": "Гомель",
+            "to": "Минск",
+            "sizes": "5х5х5",
+            "weight": "15кг",
+            "date": "2019-01-01",
+            "status": "open",
+            "respondedDeliverers": [{
+                "deliverer": "",
+                "date": "",
+                "value": 0
+            }],
+            "id": 4
         }
     ]
 }

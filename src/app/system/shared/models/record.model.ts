@@ -1,3 +1,5 @@
+import { Order } from './order.model';
+
 export class Record {
   constructor(
     public creator: string,
@@ -7,10 +9,7 @@ export class Record {
     public weight: string,
     public date: string,
     public status: string,
-    public respondedDeliverers: {
-      deliverer: string,
-      dateOfDeliver: string,
-      value: number
-    }
+    public respondedDeliverers: Order[],
+    public id?: number
   ) {}
 }

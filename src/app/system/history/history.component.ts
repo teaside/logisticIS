@@ -32,7 +32,7 @@ export class HistoryComponent implements OnInit {
       this.chartData.push({
         name: rec.date ,
         value: recEvent.reduce((total, e) => {
-          total += e.respondedDeliverers.value;
+          total += e.respondedDeliverers[0].value;
           return total;
         }, 0)
       });

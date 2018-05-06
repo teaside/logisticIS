@@ -16,6 +16,9 @@ import { HistoryChartComponent } from './history/history-chart/history-chart.com
 import { HistoryEventsComponent } from './history/history-events/history-events.component';
 import { HistoryDetailComponent } from './history/history-detail/history-detail.component';
 import { FilterPipe } from './shared/pipes/search.pipe';
+import { HistoryEventComponent } from './history/history-event/history-event.component';
+import { OrdersService } from './shared/services/orders.service';
+
 
 @NgModule({
   imports: [CommonModule, SharedModule, SystemRoutingModule],
@@ -33,8 +36,9 @@ import { FilterPipe } from './shared/pipes/search.pipe';
     HistoryChartComponent,
     HistoryEventsComponent,
     HistoryDetailComponent,
-    FilterPipe
+    FilterPipe,
+    HistoryEventComponent
   ],
-  providers: [RecordsService]
+  providers: [RecordsService, OrdersService]
 })
 export class SystemModule {}

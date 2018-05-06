@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { Record } from '../shared/models/record.model';
 import { RecordsService } from '../shared/services/records.service';
+import { Order } from '../shared/models/order.model';
 
 @Component({
   selector: 'hm-records',
@@ -29,7 +30,7 @@ export class RecordsComponent implements OnInit, OnDestroy {
       weight,
       date,
       'open',
-      { deliverer: '', dateOfDeliver: '', value: 0 }
+      [new Order('', '', 0)]
     );
     this.subscription = this.recordService
       .addRecord(record)

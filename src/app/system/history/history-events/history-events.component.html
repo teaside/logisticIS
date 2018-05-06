@@ -8,6 +8,12 @@
                     </div>
                     <div class="form-inline pull-right m-r-2">
                         <div class="form-group">
+                            <label for="agree">
+                                <input class="checkbox" id="agree" type="checkbox" (change)="showMyRecord($event)" [checked]="false">
+                                <span>Показать мои заказы</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
                             <input type="text" [(ngModel)]="searchValue" class="form-control" [placeholder]="searchPlaceholder">
                         </div>
                         <div class="btn-group" hmDropdown>
@@ -46,7 +52,7 @@
                                 <td>{{rec.weight}}</td>
                                 <td>{{rec.date}}</td>
                                 <td class="text-lg-center">
-                                    <a href="#" class="btn btn-primary-outline">Открыть</a>
+                                    <a *ngIf="rec.creator.indexOf(user.email) !== -1" [routerLink]="['/system/history', rec.id]" class="btn btn-primary-outline">Открыть</a>
                                 </td>
                             </tr>
                         </tbody>
