@@ -21,7 +21,7 @@ export class HistoryEventComponent implements OnInit {
   record: Record = new Record('', '', '', '', '', '', '', '', '', [new Order('', '', 0)], 0);
   orders: any;
   isOrdersAdded = false;
-
+  isDeliverymanAdded = false;
   isLoaded = false;
 
   constructor(
@@ -70,22 +70,17 @@ export class HistoryEventComponent implements OnInit {
   // }
   makeSuggestion() {
     const user: User = JSON.parse(window.localStorage.getItem('user'));
-    // let order: Order[] = [];
-       const rec = this.recordService.getRecordById(this.id)
+       this.recordService.getRecordById(this.id)
       .subscribe((data) => {
-        // order = data.respondedDeliverers;
-        // order.push(new Order(user.name, this.date, this.value));
+        console.log('data from server ', data);
+        console.log('create ', new Order(user.name, this.date, this.value));
         data.respondedDeliverers.push(new Order(user.name, this.date, this.value));
         console.log(data);
-        //  for (let i = 0; i < order.length; i++) {
-        //    if (order[i].deliverer === user.name) {
-        //     order[i]
-        //    }
-        //  }
-
-    // кнопка скрыта в html
         this.orderService.setDeliverer(this.id, data)
-        .subscribe((_data) => {});
+        .subscribe((_data: Record) => {
+          console.log(_data);
+          this.isDeliverymanAdded = true;
+        });
       });
   }
 }

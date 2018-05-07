@@ -47,6 +47,36 @@
           "deliverer": "nedim@mail.ru",
           "dateOfDeliver": "17.06.2018",
           "value": 400
+        },
+        {
+          "deliverer": "Диа",
+          "date": "1111-11-11",
+          "value": 999
+        },
+        {
+          "deliverer": "Диа",
+          "date": "1111-11-11",
+          "value": 777
+        },
+        {
+          "deliverer": "Диа",
+          "date": "1111-11-11",
+          "value": 1
+        },
+        {
+          "deliverer": "Диа",
+          "date": "",
+          "value": 0
+        },
+        {
+          "deliverer": "Диа",
+          "date": "",
+          "value": 0
+        },
+        {
+          "deliverer": "Диа",
+          "date": "",
+          "value": 0
         }
       ]
     },
