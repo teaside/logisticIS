@@ -1,19 +1,16 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
-
-import { Router } from '@angular/router';
-import { User } from '../../shared/models/user.model';
+import { Component, OnInit, Input } from '@angular/core';
 import { Record } from '../../shared/models/record.model';
+import { User } from '../../shared/models/user.model';
 import { Bill } from '../../shared/models/bill.model';
+import { Router } from '@angular/router';
 import { BillService } from '../../shared/services/bill.service';
 
-
-
 @Component({
-  selector: 'hm-statistics',
-  templateUrl: './statistics.component.html',
-  styleUrls: ['./statistics.component.scss']
+  selector: 'hm-analytics',
+  templateUrl: './analytics.component.html',
+  styleUrls: ['./analytics.component.scss']
 })
-export class StatisticsComponent implements OnInit {
+export class AnalyticsComponent implements OnInit {
   public user: User = JSON.parse(window.localStorage.getItem('user'));
   @Input() records: Record[] = [];
   records2: Record[] = [];
@@ -21,15 +18,10 @@ export class StatisticsComponent implements OnInit {
 
   constructor( private router: Router,
   private billService: BillService) {}
-
   ngOnInit() {
     this.billService.getBills()
     .subscribe((data: Bill[]) => {
-      for (let i = 0; i < data.length; i++) {
-        if (data[i].deliverer === this.user.name) {
-          this.bills.push(data[i]);
-        }
-      }
+      this.bills = data;
     });
   }
   openEvent() {

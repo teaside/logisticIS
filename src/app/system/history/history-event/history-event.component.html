@@ -24,7 +24,7 @@
                         <li class="list-group-item">Дата: <strong> {{record.date}} </strong></li>
                         <li class="list-group-item">Доставщик: <strong> {{record.deliverer}} </strong></li>
                         <li class="list-group-item">Статус: <strong> {{record.status}} </strong> <button *ngIf="(record.deliverer.toLowerCase() != 'не выбран') && (record.status.toLowerCase() != 'доставлено')" (click)="confirmDelivery()" class="btn btn-warning default_pos">Доставить</button></li>
-                        <li class="list-group-item">Информация об оплате: <span *ngIf="this.record.sum != ''">Стоимость <strong>  {{ this.record.sum }} </strong></span> комиссия <strong>  {{comission}} % </strong></li>
+                        <li class="list-group-item">Информация об оплате: <span *ngIf="this.record.sum != '0'">Стоимость <strong>  {{ this.record.sum }} </strong></span> комиссия <strong>  {{comission}} % </strong></li>
                     </ul>
                 </div>
                 <div class="card-footer" *ngIf="record.deliverer == 'не выбран'">

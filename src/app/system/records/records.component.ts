@@ -30,6 +30,7 @@ export class RecordsComponent implements OnInit, OnDestroy {
       weight,
       date,
       'не выбран',
+      '',
       'не доставлено',
       [new Order('', '', 0)]
     );

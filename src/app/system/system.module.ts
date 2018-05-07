@@ -8,13 +8,10 @@ import { SystemComponent } from './system.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 
-import { StatisticsComponent } from './statistics/statistics.component';
 import { RecordsComponent } from './records/records.component';
 import { HistoryComponent } from './history/history.component';
 
-import { HistoryChartComponent } from './history/history-chart/history-chart.component';
 import { HistoryEventsComponent } from './history/history-events/history-events.component';
-import { HistoryDetailComponent } from './history/history-detail/history-detail.component';
 
 import { HistoryEventComponent } from './history/history-event/history-event.component';
 
@@ -30,15 +27,9 @@ import { FilterPipe } from '../shared/pipes/filter.pipe';
     SystemComponent,
     SidebarComponent,
     HeaderComponent,
-    StatisticsComponent,
     RecordsComponent,
     HistoryComponent,
-    HistoryComponent,
-    RecordsComponent,
-    StatisticsComponent,
-    HistoryChartComponent,
     HistoryEventsComponent,
-    HistoryDetailComponent,
     HistoryEventComponent,
     FilterPipe
   ],
