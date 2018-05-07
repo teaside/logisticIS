@@ -1,0 +1,42 @@
+<div class="title-block">
+    <h3 class="title">
+        <a [routerLink]="['/system-delivery', 'history']"><i class="fa fa-arrow-left"></i></a> Страница записи № {{record.id}}
+        <span class="sparkline bar"></span>
+    </h3>
+</div>
+<section class="section">
+    <div class="row">
+        <div *ngIf="!isLoaded">...</div>
+        <div *ngIf="isLoaded" class=" col-lg-offset-2 col-lg-8 col-md-10 col-md-offset-1 col-xs-12">
+            <div class="card card-success">
+                <div class="card-header">
+                    <div class="header-block">
+                        <p class="title">Доход</p>
+                    </div>
+                </div>
+                <div class="card-block">
+                    <ul class="list-group">
+                        <li class="list-group-item">Заказчик: <strong> {{record.creator}} </strong></li>
+                        <li class="list-group-item">Откуда: <strong> {{record.from}} </strong></li>
+                        <li class="list-group-item">Куда: <strong> {{record.to}} </strong></li>
+                        <li class="list-group-item">Размеры: <strong> {{record.sizes}} </strong></li>
+                        <li class="list-group-item">Вес: <strong> {{record.weight}} </strong></li>
+                        <li class="list-group-item">Дата: <strong> {{record.date}} </strong></li>
+                        <li class="list-group-item">Доставщик: <strong> {{record.deliverer}} </strong></li>
+
+                        <li class="list-group-item">Статус: <strong> {{record.status}} </strong> </li>
+                    </ul>
+                </div>
+                <div class="card-footer" *ngIf="record.deliverer == 'не выбран'">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Стоимость" type="number" [(ngModel)]="value">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Дата" type="date" [(ngModel)]="date">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" (click)="makeSuggestion()">Внести предложение</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

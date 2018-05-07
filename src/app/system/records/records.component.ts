@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs/Subscription';
+import { RecordsService } from '../../shared/services/records.service';
+import { Record } from '../../shared/models/record.model';
+import { Order } from '../../shared/models/order.model';
 
-import { Record } from '../shared/models/record.model';
-import { RecordsService } from '../shared/services/records.service';
-import { Order } from '../shared/models/order.model';
 
 @Component({
   selector: 'hm-records',
@@ -29,7 +29,8 @@ export class RecordsComponent implements OnInit, OnDestroy {
       sizes,
       weight,
       date,
-      'open',
+      'не выбран',
+      'не доставлено',
       [new Order('', '', 0)]
     );
     this.subscription = this.recordService

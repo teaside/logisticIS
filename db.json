@@ -1,94 +1,179 @@
 {
-    "users": [{
-            "email": "dim@mail.ru",
-            "password": "123456",
-            "name": "Дима",
-            "phoneNumber": "+375295356204",
-            "type": "provider",
-            "id": 1
+  "users": [
+    {
+      "email": "admin@mail.ru",
+      "password": "123456",
+      "name": "admin",
+      "phoneNumber": "+375295356204",
+      "type": "admin",
+      "id": 1
+    },
+    {
+      "email": "nedim@mail.ru",
+      "password": "123456",
+      "name": "неДима",
+      "phoneNumber": "+375295356204",
+      "type": "supplier",
+      "id": 1
+    },
+    {
+      "email": "vasyamakarchuk@gmail.com",
+      "password": "Lord_1774",
+      "name": "Диа",
+      "tel": "+375295356204",
+      "type": "customer",
+      "id": 2
+    }
+  ],
+  "ordersList": [
+    {
+      "id": 1,
+      "creator": "dim@mail.ru",
+      "from": "минск",
+      "to": "гомель",
+      "sizes": "5x5x1",
+      "wieght": "50кг",
+      "date": "15.05.2018",
+      "deliverer": "не выбран",
+      "status": "не доставлено",
+      "respondedDeliverers": [
+        {
+          "deliverer": "nedim@mail.ru",
+          "dateOfDeliver": "17.06.2018",
+          "value": 400
         },
         {
-            "email": "nedim@mail.ru",
-            "password": "123456",
-            "name": "неДима",
-            "phoneNumber": "+375295356204",
-            "type": "deliverer",
-            "id": 1
+          "deliverer": "nedim@mail.ru",
+          "dateOfDeliver": "17.06.2018",
+          "value": 400
         },
         {
-            "email": "vasyamakarchuk@gmail.com",
-            "password": "Lord_1774",
-            "name": "Диа",
-            "tel": "+375295356204",
-            "type": "customer",
-            "id": 2
+          "deliverer": "Диа",
+          "date": "",
+          "value": 0
+        },
+        {
+          "deliverer": "Диа",
+          "date": "",
+          "value": 0
+        },
+        {
+          "deliverer": "Диа",
+          "date": "",
+          "value": 0
+        },
+        {
+          "deliverer": "Диа",
+          "date": "",
+          "value": 0
         }
-    ],
-    "ordersList": [{
-            "id": 1,
-            "creator": "dim@mail.ru",
-            "from": "минск",
-            "to": "гомель",
-            "sizes": "5x5x1",
-            "wieght": "50кг",
-            "date": "15.05.2018",
-            "status": "open",
-            "respondedDeliverers": [{
-                "deliverer": "nedim@mail.ru",
-                "dateOfDeliver": "17.06.2018",
-                "value": 400
-            }]
-        },
+      ]
+    },
+    {
+      "creator": "dim@mail.ru",
+      "from": "from",
+      "to": "to",
+      "sizes": "sized",
+      "weight": "weight",
+      "date": "0001-01-01",
+      "deliverer": "не выбран",
+      "status": "не доставлено",
+      "respondedDeliverers": [
         {
-            "creator": "dim@mail.ru",
-            "from": "from",
-            "to": "to",
-            "sizes": "sized",
-            "weight": "weight",
-            "date": "0001-01-01",
-            "status": "",
-            "respondedDeliverers": [{
-                "deliverer": "",
-                "dateOfDeliver": "",
-                "value": 200
-            }],
-            "id": 2
-        },
-        {
-            "creator": "vasyamakarchuk@gmail.com",
-            "from": "Гомель",
-            "to": "Минск",
-            "sizes": "1х2х1",
-            "weight": "15 кг",
-            "date": "2018-04-02",
-            "status": "open",
-            "respondedDeliverers": [{
-                    "deliverer": "петр",
-                    "dateOfDeliver": "25.05.1997",
-                    "value": 300
-                },
-                {
-                    "deliverer": "петр",
-                    "dateOfDeliver": "25.05.1997",
-                    "value": 300
-                }
-            ],
-            "id": 3
-        },
-        {
-            "creator": "vasyamakarchuk@gmail.com",
-            "from": "Гомель",
-            "to": "Минск",
-            "sizes": "5х5х5",
-            "weight": "15кг",
-            "date": "2019-01-01",
-            "status": "open",
-            "respondedDeliverers": [{
-                "deliverer": "",
-                "date": "",
-                "value": 0
-            }],
-            "id": 4
+          "deliverer": "",
+          "dateOfDeliver": "",
+          "value": 200
         }
-    ]
+      ],
+      "id": 2
+    },
+    {
+      "creator": "vasyamakarchuk@gmail.com",
+      "from": "Гомель",
+      "to": "Минск",
+      "sizes": "1х2х1",
+      "weight": "15 кг",
+      "date": "2018-04-02",
+      "deliverer": "петр",
+      "status": "доставлено",
+      "respondedDeliverers": [
+        {
+          "deliverer": "петр",
+          "dateOfDeliver": "25.05.1997",
+          "value": 300
+        },
+        {
+          "deliverer": "миха",
+          "dateOfDeliver": "20.05.1997",
+          "value": 400
+        }
+      ],
+      "id": 3
+    },
+    {
+      "creator": "vasyamakarchuk@gmail.com",
+      "from": "Гомель",
+      "to": "Минск",
+      "sizes": "5х5х5",
+      "weight": "15кг",
+      "date": "2019-01-01",
+      "deliverer": "не выбран",
+      "status": "доставлено",
+      "respondedDeliverers": [
+        {
+          "deliverer": "",
+          "date": "",
+          "value": 0
+        }
+      ],
+      "id": 4
+    },
+    {
+      "creator": "email",
+      "from": "from",
+      "to": "to",
+      "sizes": "sizes",
+      "weight": "weight",
+      "date": "date",
+      "deliverer": "не выбран",
+      "status": "не доставлен",
+      "respondedDeliverers": [
+        {
+          "deliverer": "доставщик",
+          "date": "датадотсавки",
+          "value": 1
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "bills": [
+    {
+      "deliveryman": "deli",
+      "owner": "owner",
+      "value": 0,
+      "percent": 0,
+      "date": "date",
+      "status": "-",
+      "id": 1
+    },
+    {
+      "deliverer": "deliverer",
+      "owner": "owner",
+      "value": 0,
+      "percent": 0,
+      "date": "date",
+      "status": "status",
+      "id": 2
+    },
+    {
+      "deliverer": "deliverer",
+      "owner": "owner",
+      "value": 0,
+      "percent": 0,
+      "date": "date",
+      "status": "status",
+      "id": 3
+    }
+  ]
 }

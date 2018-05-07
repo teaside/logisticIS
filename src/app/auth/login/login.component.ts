@@ -56,7 +56,14 @@ export class LoginComponent implements OnInit {
         if (user.password === formData.password) {
           this.showMessage({text: '', type: ''});
           this.authService.login();
-          this.router.navigate(['/system', 'bill']);
+          if (user.type === 'customer') {
+            this.router.navigate(['/system', 'statistics']);
+          } else if (user.type === 'supplier') {
+            this.router.navigate(['/system-delivery', 'statistics']);
+          } else if (user.type === 'admin') {
+            this.router.navigate(['/system-admin', 'bill']);
+          }
+
           window.localStorage.setItem('user', JSON.stringify(user));
         } else {
           this.showMessage({text: 'Пароль не верный', type: 'danger'});

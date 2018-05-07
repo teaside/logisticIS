@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform, Injectable } from '@angular/core';
-import { User } from '../../../shared/models/user.model';
 
 @Pipe({
   name: 'hmFilter'

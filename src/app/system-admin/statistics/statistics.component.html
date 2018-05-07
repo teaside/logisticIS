@@ -1,0 +1,37 @@
+<section class="section">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bordered">
+                    <div class="header-block">
+                        <h3 class="title">Все заказы</h3>
+                    </div>
+                </div>
+                <div class="card-block">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Заказчик</th>
+                                <th>Стоимость</th>
+                                <th>Комиссия</th>
+                                <th>Дата</th>
+                                <th>Статус оплаты</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let bl of bills; let idx = index">
+                                <th scope="row">{{ idx + 1 }}</th>
+                                <td>{{bl.owner}}</td>
+                                <td>{{bl.value}}</td>
+                                <td>{{bl.percent}}</td>
+                                <td>{{bl.date}}</td>
+                                <td>{{bl.status}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

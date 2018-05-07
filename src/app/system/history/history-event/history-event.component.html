@@ -11,7 +11,7 @@
             <div class="card card-success">
                 <div class="card-header">
                     <div class="header-block">
-                        <p class="title">Доход</p>
+                        <p class="title">Карточка записи</p>
                     </div>
                 </div>
                 <div class="card-block">
@@ -22,11 +22,14 @@
                         <li class="list-group-item">Размеры: <strong> {{record.sizes}} </strong></li>
                         <li class="list-group-item">Вес: <strong> {{record.weight}} </strong></li>
                         <li class="list-group-item">Дата: <strong> {{record.date}} </strong></li>
-                        <li class="list-group-item">Статус: <strong> {{record.status}} </strong></li>
+                        <li class="list-group-item">Доставщик: <strong> {{record.deliverer}} </strong></li>
+                        <li class="list-group-item">Статус: <strong> {{record.status}} </strong> <button *ngIf="(record.deliverer.toLowerCase() != 'не выбран') && (record.status.toLowerCase() != 'доставлено')" (click)="confirmDelivery()" class="btn btn-warning default_pos">Доставить</button></li>
+                        <li class="list-group-item">Информация об оплате: <strong> </strong></li>
                     </ul>
                 </div>
-                <div class="card-footer">
-                    <p class="title">Список доступных достащиков</p>
+                <div class="card-footer" *ngIf="record.deliverer == 'не выбран'">
+                    <p class="title">Список доступных достащиков:</p>
+
                     <!-- <button class="btn btn-primary btn-lg btn-block">Показать откликнувшихся</button> -->
                     <table class="table table-striped" *ngIf="record.respondedDeliverers[0].deliverer != ''">
                         <thead>
@@ -35,7 +38,7 @@
                                 <th scope="col">Доставщик</th>
                                 <th scope="col">Дата</th>
                                 <th scope="col">Стоимость</th>
-                                <th scope="col">Выбор</th>
+                                <th *ngIf="record.deliverer == 'не выбран'" scope="col">Выбор</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,7 +47,7 @@
                                 <td> {{order.deliverer}} </td>
                                 <td> {{order.dateOfDeliver}} </td>
                                 <td> {{order.value}} </td>
-                                <td><button class="btn btn-success">+</button></td>
+                                <td *ngIf="record.deliverer == 'не выбран'"><button class="btn btn-success" (click)="chooseDeliverer(order.deliverer)">+</button></td>
                             </tr>
                         </tbody>
                     </table>

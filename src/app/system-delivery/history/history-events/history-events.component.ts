@@ -43,7 +43,6 @@ export class HistoryEventsComponent implements OnInit {
         }
         }
       }
-
       this.records = recs;
       } else {
         this.records = this.records2;

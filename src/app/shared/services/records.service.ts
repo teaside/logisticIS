@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BaseApi } from '../../../shared/core/base-api';
 import { Http } from '@angular/http';
 import { Record } from '../models/record.model';
 import { Observable } from 'rxjs/Observable';
-import { User } from '../../../shared/models/user.model';
+import { BaseApi } from '../core/base-api';
 
 @Injectable()
 export class RecordsService extends BaseApi {

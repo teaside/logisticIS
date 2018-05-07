@@ -10,12 +10,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserService } from './shared/services/user.service';
 import { AuthService } from './shared/services/auth.service';
 import { SystemModule } from './system/system.module';
+import { SystemDeliveryModule } from './system-delivery/system-delivery.module';
+import { SystemAdminModule } from './system-admin/system-admin.module';
+import { Bill } from './shared/models/bill.model';
+import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { BillService } from './shared/services/bill.service';
+import { HttpClient } from './shared/utils/HttpClient';
+// import { SystemAdminModule } from './system-admin/system-admin.module';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
@@ -23,10 +31,11 @@ import { SystemModule } from './system/system.module';
     AuthModule,
     AppRoutingModule,
     SystemModule,
+    SystemDeliveryModule,
+    SystemAdminModule,
     BrowserAnimationsModule
-
   ],
-  providers: [ UserService, AuthService ],
+  providers: [ UserService, AuthService, BillService, HttpClient ],
   bootstrap: [
     AppComponent
   ]

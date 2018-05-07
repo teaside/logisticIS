@@ -8,6 +8,7 @@ export class Record {
     public sizes: string,
     public weight: string,
     public date: string,
+    public deliverer: string,
     public status: string,
     public respondedDeliverers: Order[],
     public id?: number
