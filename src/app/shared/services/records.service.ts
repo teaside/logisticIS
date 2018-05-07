@@ -13,6 +13,7 @@ export class RecordsService extends BaseApi {
    addRecord(record: Record): Observable<Record> {
      return this.post('ordersList', record);
    }
+
    getRecords(): Observable<Record[]> {
     return this.get('ordersList');
   }

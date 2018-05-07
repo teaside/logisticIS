@@ -16,6 +16,7 @@ import { Bill } from './shared/models/bill.model';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
 import { BillService } from './shared/services/bill.service';
 import { HttpClient } from './shared/utils/HttpClient';
+import { ComissionService } from './shared/services/comission.service';
 // import { SystemAdminModule } from './system-admin/system-admin.module';
 
 
@@ -35,7 +36,7 @@ import { HttpClient } from './shared/utils/HttpClient';
     SystemAdminModule,
     BrowserAnimationsModule
   ],
-  providers: [ UserService, AuthService, BillService, HttpClient ],
+  providers: [ UserService, AuthService, BillService, HttpClient, ComissionService ],
   bootstrap: [
     AppComponent
   ]

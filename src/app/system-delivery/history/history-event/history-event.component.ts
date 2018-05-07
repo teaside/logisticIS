@@ -18,7 +18,7 @@ export class HistoryEventComponent implements OnInit {
   date = '';
 
   id: string;
-  record: Record = new Record('', '', '', '', '', '', '', '', [new Order('', '', 0)], 0);
+  record: Record = new Record('', '', '', '', '', '', '', '', '', [new Order('', '', 0)], 0);
   orders: any;
   isOrdersAdded = false;
 
@@ -32,7 +32,7 @@ export class HistoryEventComponent implements OnInit {
 
   ngOnInit() {
     this.isLoaded = false;
-    this.record = new Record('', '', '', '', '', '', '', '',  [new Order('', '', 0)], 0);
+    this.record = new Record('', '', '', '', '', '', '', '', '',  [new Order('', '', 0)], 0);
     this.id = this.route.snapshot.params['id'];
     this.recordService.getRecordById(this.id)
     .subscribe((data) => {
