@@ -71,16 +71,21 @@ export class HistoryEventComponent implements OnInit {
   makeSuggestion() {
     const user: User = JSON.parse(window.localStorage.getItem('user'));
        this.recordService.getRecordById(this.id)
-      .subscribe((data) => {
+      .subscribe((data: Record) => {
         console.log('data from server ', data);
         console.log('create ', new Order(user.name, this.date, this.value));
-        data.respondedDeliverers.push(new Order(user.name, this.date, this.value));
-        console.log(data);
+        if (data.respondedDeliverers[0].deliverer === '') {
+          data.respondedDeliverers[0].date = this.date;
+          data.respondedDeliverers[0].deliverer = user.name;
+          data.respondedDeliverers[0].value = this.value;
+        } else {
+          data.respondedDeliverers.push(new Order(user.name, this.date, this.value));
+        }
         this.orderService.setDeliverer(this.id, data)
-        .subscribe((_data: Record) => {
-          console.log(_data);
-          this.isDeliverymanAdded = true;
-        });
+          .subscribe((_data: Record) => {
+            console.log(_data);
+            this.isDeliverymanAdded = true;
+          });
       });
   }
 }

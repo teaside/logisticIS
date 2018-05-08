@@ -13,7 +13,7 @@ import { BillService } from '../../shared/services/bill.service';
 export class AnalyticsComponent implements OnInit {
 
   chartData = [];
-
+data = [];
   public user: User = JSON.parse(window.localStorage.getItem('user'));
   @Input() records: Record[] = [];
   records2: Record[] = [];

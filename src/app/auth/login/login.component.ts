@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
           this.showMessage({text: '', type: ''});
           this.authService.login();
           if (user.type === 'customer') {
-            this.router.navigate(['/system', 'statistics']);
+            this.router.navigate(['/system', 'history']);
           } else if (user.type === 'supplier') {
             this.router.navigate(['/system-delivery', 'statistics']);
           } else if (user.type === 'admin') {

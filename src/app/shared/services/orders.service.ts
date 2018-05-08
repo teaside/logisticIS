@@ -6,6 +6,7 @@ import { Record } from '../models/record.model';
 import { BaseApi } from '../core/base-api';
 import { User } from '../models/user.model';
 
+
 @Injectable()
 export class OrdersService extends BaseApi {
 
@@ -18,7 +19,12 @@ user: User = JSON.parse(window.localStorage.getItem('user'));
     return this.get(`ordersList/${id}/respondedDeliverers`);
   }
   setDeliverer(id: string, record: Record): Observable<Record> {
+    console.log('id ', id);
+    console.log('record ', record);
     return this.put(`ordersList/${id}`, record);
   }
+  // addDeliverer(id: string, record: Record): Observable<Record> {
+  //   return this.post(`ordersList/${id}`, record);
+  // }
 
 }
