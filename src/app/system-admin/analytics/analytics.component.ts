@@ -11,10 +11,14 @@ import { BillService } from '../../shared/services/bill.service';
   styleUrls: ['./analytics.component.scss']
 })
 export class AnalyticsComponent implements OnInit {
+
+  chartData = [];
+
   public user: User = JSON.parse(window.localStorage.getItem('user'));
   @Input() records: Record[] = [];
   records2: Record[] = [];
   bills: Bill[];
+
 
   constructor( private router: Router,
   private billService: BillService) {}
@@ -22,8 +26,26 @@ export class AnalyticsComponent implements OnInit {
     this.billService.getBills()
     .subscribe((data: Bill[]) => {
       this.bills = data;
+      this.calculateChartData();
+      console.log(this.chartData);
     });
   }
+
+  calculateChartData(): void {
+    this.chartData = [];
+
+    this.bills.forEach((cat) => {
+      const catEvents = this.bills.filter((e) => e.owner === cat.owner);
+      this.chartData.push({
+        name: cat.owner,
+        value: catEvents.reduce((total, e) => {
+          total += e.value;
+          return total;
+        }, 0)
+      });
+    });
+  }
+
   openEvent() {
 
   }

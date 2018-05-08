@@ -11,13 +11,15 @@ import { Bill } from '../shared/models/bill.model';
 import { BillService } from '../shared/services/bill.service';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
-    SystemAdminRoutingModule
+    SystemAdminRoutingModule,
+    SharedModule
   ],
   declarations: [
     SystemAdminComponent,

@@ -1,168 +1,161 @@
 {
-  "users": [
-    {
-      "email": "admin@mail.ru",
-      "password": "123456",
-      "name": "admin",
-      "phoneNumber": "+375295356204",
-      "type": "admin",
-      "id": 1
-    },
-    {
-      "email": "nedim@mail.ru",
-      "password": "123456",
-      "name": "неДима",
-      "phoneNumber": "+375295356204",
-      "type": "supplier",
-      "id": 1
-    },
-    {
-      "email": "vasyamakarchuk@gmail.com",
-      "password": "Lord_1774",
-      "name": "Диа",
-      "tel": "+375295356204",
-      "type": "customer",
-      "id": 2
-    }
-  ],
-  "ordersList": [
-    {
-      "id": 1,
-      "creator": "dim@mail.ru",
-      "from": "минск",
-      "to": "гомель",
-      "sizes": "5x5x1",
-      "wieght": "50кг",
-      "date": "15.05.2018",
-      "deliverer": "не выбран",
-      "sum": "0",
-      "status": "не доставлено",
-      "respondedDeliverers": [
-        {
-          "deliverer": "nedim@mail.ru",
-          "dateOfDeliver": "17.06.2018",
-          "value": 400
+    "users": [{
+            "email": "admin@mail.ru",
+            "password": "123456",
+            "name": "admin",
+            "phoneNumber": "+375295356204",
+            "type": "admin",
+            "id": 1
         },
         {
-          "deliverer": "nedim@mail.ru",
-          "dateOfDeliver": "17.06.2018",
-          "value": 400
+            "email": "nedim@mail.ru",
+            "password": "123456",
+            "name": "неДима",
+            "phoneNumber": "+375295356204",
+            "type": "supplier",
+            "id": 1
         },
         {
-          "deliverer": "Диа",
-          "date": "1111-11-11",
-          "value": 999
-        },
-        {
-          "deliverer": "Диа",
-          "date": "1111-11-11",
-          "value": 777
-        },
-        {
-          "deliverer": "Диа",
-          "date": "1111-11-11",
-          "value": 1
-        },
-        {
-          "deliverer": "Диа",
-          "date": "",
-          "value": 0
-        },
-        {
-          "deliverer": "Диа",
-          "date": "",
-          "value": 0
-        },
-        {
-          "deliverer": "Диа",
-          "date": "",
-          "value": 0
+            "email": "vasyamakarchuk@gmail.com",
+            "password": "Lord_1774",
+            "name": "Диа",
+            "tel": "+375295356204",
+            "type": "customer",
+            "id": 2
         }
-      ]
-    },
-    {
-      "creator": "dim@mail.ru",
-      "from": "from",
-      "to": "to",
-      "sizes": "sized",
-      "weight": "weight",
-      "date": "0001-01-01",
-      "deliverer": "не выбран",
-      "sum": "0",
-      "status": "не доставлено",
-      "respondedDeliverers": [
-        {
-          "deliverer": "",
-          "dateOfDeliver": "",
-          "value": 200
-        }
-      ],
-      "id": 2
-    },
-    {
-      "creator": "vasyamakarchuk@gmail.com",
-      "from": "Гомель",
-      "to": "Минск",
-      "sizes": "1х2х1",
-      "weight": "15 кг",
-      "date": "2018-04-02",
-      "deliverer": "петр",
-      "sum": "0",
-      "status": "доставлено",
-      "respondedDeliverers": [
-        {
-          "deliverer": "петр",
-          "dateOfDeliver": "25.05.1997",
-          "value": 300
+    ],
+    "ordersList": [{
+            "id": 1,
+            "creator": "dim@mail.ru",
+            "from": "минск",
+            "to": "гомель",
+            "sizes": "5x5x1",
+            "wieght": "50кг",
+            "date": "15.05.2018",
+            "deliverer": "не выбран",
+            "sum": "0",
+            "status": "не доставлено",
+            "respondedDeliverers": [{
+                    "deliverer": "nedim@mail.ru",
+                    "dateOfDeliver": "17.06.2018",
+                    "value": 400
+                },
+                {
+                    "deliverer": "nedim@mail.ru",
+                    "dateOfDeliver": "17.06.2018",
+                    "value": 400
+                },
+                {
+                    "deliverer": "Диа",
+                    "date": "1111-11-11",
+                    "value": 999
+                },
+                {
+                    "deliverer": "Диа",
+                    "date": "1111-11-11",
+                    "value": 777
+                },
+                {
+                    "deliverer": "Диа",
+                    "date": "1111-11-11",
+                    "value": 1
+                },
+                {
+                    "deliverer": "Диа",
+                    "date": "",
+                    "value": 0
+                },
+                {
+                    "deliverer": "Диа",
+                    "date": "",
+                    "value": 0
+                },
+                {
+                    "deliverer": "Диа",
+                    "date": "",
+                    "value": 0
+                }
+            ]
         },
         {
-          "deliverer": "миха",
-          "dateOfDeliver": "20.05.1997",
-          "value": 400
+            "creator": "dim@mail.ru",
+            "from": "from",
+            "to": "to",
+            "sizes": "sized",
+            "weight": "weight",
+            "date": "0001-01-01",
+            "deliverer": "не выбран",
+            "sum": "0",
+            "status": "не доставлено",
+            "respondedDeliverers": [{
+                "deliverer": "",
+                "dateOfDeliver": "",
+                "value": 200
+            }],
+            "id": 2
+        },
+        {
+            "creator": "vasyamakarchuk@gmail.com",
+            "from": "Гомель",
+            "to": "Минск",
+            "sizes": "1х2х1",
+            "weight": "15 кг",
+            "date": "2018-04-02",
+            "deliverer": "петр",
+            "sum": "0",
+            "status": "доставлено",
+            "respondedDeliverers": [{
+                    "deliverer": "петр",
+                    "dateOfDeliver": "25.05.1997",
+                    "value": 300
+                },
+                {
+                    "deliverer": "миха",
+                    "dateOfDeliver": "20.05.1997",
+                    "value": 400
+                }
+            ],
+            "id": 3
         }
-      ],
-      "id": 3
+    ],
+    "bills": [{
+            "deliverer": "deli",
+            "owner": "owner",
+            "value": 400,
+            "percent": 0,
+            "date": "date",
+            "status": "-",
+            "id": 1
+        },
+        {
+            "deliverer": "deliverer",
+            "owner": "asd",
+            "value": 150,
+            "percent": 0,
+            "date": "date",
+            "status": "status",
+            "id": 2
+        },
+        {
+            "deliverer": "петр",
+            "owner": "vasyamakarchuk@gmail.com",
+            "value": 300,
+            "percent": 0.02,
+            "date": "Tue May 08 2018 00:23:39 GMT+0300 (Беларусь (зима))",
+            "status": "оплачено",
+            "id": 3
+        },
+        {
+            "deliverer": "петр",
+            "owner": "vasyamakarchuk@gmail.com",
+            "value": 300,
+            "percent": 0.02,
+            "date": "Tue May 08 2018 00:39:11 GMT+0300 (Беларусь (зима))",
+            "status": "оплачено",
+            "id": 4
+        }
+    ],
+    "comission": {
+        "value": "0.02"
     }
-  ],
-  "bills": [
-    {
-      "deliveryman": "deli",
-      "owner": "owner",
-      "value": 0,
-      "percent": 0,
-      "date": "date",
-      "status": "-",
-      "id": 1
-    },
-    {
-      "deliverer": "deliverer",
-      "owner": "owner",
-      "value": 0,
-      "percent": 0,
-      "date": "date",
-      "status": "status",
-      "id": 2
-    },
-    {
-      "deliverer": "петр",
-      "owner": "vasyamakarchuk@gmail.com",
-      "value": 300,
-      "percent": 0.02,
-      "date": "Tue May 08 2018 00:23:39 GMT+0300 (Беларусь (зима))",
-      "status": "оплачено",
-      "id": 3
-    },
-    {
-      "deliverer": "петр",
-      "owner": "vasyamakarchuk@gmail.com",
-      "value": 300,
-      "percent": 0.02,
-      "date": "Tue May 08 2018 00:39:11 GMT+0300 (Беларусь (зима))",
-      "status": "оплачено",
-      "id": 4
-    }
-  ],
-  "comission": {
-    "value": "0.02"
-  }
 }
